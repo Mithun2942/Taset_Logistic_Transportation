@@ -1,0 +1,410 @@
+/*
+-----------------------------------------------------------------------
+  Service CSS
+-----------------------------------------------------------------------
+*/
+.service-area {
+  &.service-default-area {
+    background-color: $white-f5;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .container {
+      padding: 141px 15px 131px;
+      position: relative;
+      @media #{$lg-device} {
+        padding: 97px 15px 100px;
+      }
+      @media #{$sm-device} {
+        padding: 77px 15px 72px;
+      }
+    }
+    .section-title {
+      margin-bottom: 79px;
+      @media #{$lg-device} {
+        margin-bottom: 61px;
+      }
+      @media #{$sm-device} {
+        margin-bottom: 40px;
+      }
+      .subtitle {
+        margin-bottom: 18px;
+        @media #{$lg-device} {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .shape-group {
+      .shape-style2 {
+        left: -145px;
+        opacity: .06;
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        z-index: -1;
+      }
+      .shape-style3 {
+        opacity: .06;
+        position: absolute;
+        pointer-events: none;
+        right: -132px;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+  &.service-grid-area {
+    padding: 140px 0;
+    @media #{$lg-device} {
+      padding: 100px 0;
+    }
+    @media #{$sm-device} {
+      padding: 80px 0;
+    }
+    .service-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.btn-service {
+  padding: 21.5px 33px;
+  margin-top: 30px;
+  @media #{$sm-device} {
+    font-size: 15px;
+    margin-top: 25px;
+    padding: 17px 25px;
+  }
+  i {
+    margin-left: 10px;
+  }
+}
+
+.service-item {
+  text-align: center;
+  .thumb {
+    border-radius: 2px 2px 0 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      @include transition(all .5s ease-in-out);
+    }
+  }
+  .content {
+    background-color: $white-f5;
+    border-radius: 0 0 0 2px;
+    padding: 31px 12px 29px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 91% 100%, 0% 100%);
+    @media #{$lg-device} {
+      padding: 28px 12px 30px;
+    }
+    @media #{$xs-device} {
+      padding: 25px 10px 27px;
+    }
+    &:after {
+      background-color: $theme-color;
+      content: "";
+      height: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+      @include transition(all .3s ease-in-out);
+    }
+    .title {
+      font-size: 23px;
+      line-height: 1;
+      margin-bottom: 0;
+      @media #{$lg-device} {
+        font-size: 20px;
+      }
+      @media #{$xs-device} {
+        font-size: 18px;
+      }
+      a {
+        color: $heading-color;
+      }
+    }
+  }
+  &:hover {
+    .thumb {
+      img {
+        @include scale(1.08);
+      }
+    }
+    .content {
+      &:after {
+        background-color: $theme-color;
+        height: 100%;
+      }
+      .title {
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.service-slider-container {
+  .swiper-pagination {
+    align-items: center;
+    display: flex;
+    margin: 73px auto 0;
+    justify-content: flex-end;
+    position: relative;
+    @media #{$sm-device} {
+      justify-content: center;
+      margin: 40px auto 0;
+    }
+    &.swiper-pagination-bullets {
+      .swiper-pagination-bullet {
+        background-color: #d4ccc8;
+        border-radius: 50%;
+        height: 8;
+        margin: 0 5.1px;
+        opacity: 1;
+        width: 8;
+        @include transition(.3s);
+        &:hover {
+          background-color: $theme-color;
+        }
+        &.swiper-pagination-bullet-active {
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.get-started {
+  color: $heading-color;
+  font-weight: $font-weight-bold;
+  font-size: 17px;
+  margin-top: -28px;
+  @media #{$sm-device} {
+    margin-top: 38px;
+    text-align: center;
+  }
+  a {
+    color: $theme-color;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.service-details-area {
+  padding: 140px 0 115px;
+  @media #{$lg-device} {
+    padding: 100px 0 75px;
+  }
+  @media #{$md-device} {
+    padding: 100px 0 37px;
+  }
+  @media #{$sm-device} {
+    padding: 80px 0 27px;
+  }
+}
+
+.sidebar-area {
+  .widget-title {
+    margin-bottom: 39px;
+    @media #{$xs-device} {
+      margin-bottom: 30px;
+    }
+  }
+  &.service-sidebar-area {
+    margin-right: 30px;
+    @media #{$lg-device} {
+      margin-right: 0;
+    }
+  }
+}
+
+.widget-item {
+  margin-bottom: 63px;
+}
+
+.widget-title {
+  .title {
+    font-size: 30px;
+    @media #{$xs-device} {
+      font-size: 24px;
+    }
+  }
+}
+
+.widget-search-box {
+  .form-input-item {
+    position: relative;
+    input {
+      border: 1px solid #eeeeee;
+      border-radius: 2px;
+      color: $black;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 15px 60px 15px 25px;
+      width: 100%;
+      @include transition(all .3s ease-in-out);
+      @include placeholder {
+        color: $body-color;
+      }
+      &:focus {
+        border-color: $theme-color;
+      }
+    }
+    button {
+      background-color: $theme-color;
+      border: none;
+      border-radius: 2px;
+      color: $white;
+      font-size: 15px;
+      line-height: 1;
+      padding: 16.5px 16.5px;
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition(all .4s ease-in-out);
+      &:hover {
+        background-color: $theme-color2;
+      }
+    }
+  }
+}
+
+.widget-categories {
+  background-color: $white-f5;
+  padding: 50px 35px;
+  @media #{$xs-device} {
+    padding: 30px 15px;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 18px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        background-color: $white;
+        color: $body-color;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 18px 23px 16px 24px;
+        line-height: 1;
+        @include transition(all .4s ease-in-out);
+        @media #{$xs-device} {
+          font-size: 15px;
+        }
+        span {
+          float: right;
+        }
+        &:hover {
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.widget-tags {
+  background-color: $white-f5;
+  padding: 45px 25px 35px 35px;
+  @media #{$xs-device} {
+    padding: 30px 10px 20px 15px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+    @media #{$lg-device} {
+      justify-content: start;
+    }
+    li {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      a {
+        background-color: $white;
+        border-radius: 2px;
+        color: $body-color;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        padding: 17.5px 27px;
+        @include transition(all .3s ease-in-out);
+        &:hover {
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+      .tags-padding {
+        padding: 17.5px 49px;
+        @media #{$lg-device} {
+          padding: 17.5px 19px;
+        }
+      }
+    }
+  }
+}
+
+.service-details-body {
+  .thumb {
+    img {
+      border-radius: 2px;
+    }
+  }
+  .content {
+    .title {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      margin-top: 30px;
+      @media #{$lg-device} {
+        font-size: 36px;
+      }
+      @media #{$sm-device} {
+        font-size: 24px;
+      }
+    }
+    p {
+      color: #656565;
+      margin-bottom: 16px;
+      @media #{$sm-device} {
+        font-size: 14px;
+      }
+    }
+    ul {
+      margin-bottom: 16px;
+      li {
+        align-items: baseline;
+        color: $body-color;
+        display: flex;
+        font-weight: $font-weight-medium;
+        font-size: 19px;
+        margin-bottom: 5px;
+        @media #{$sm-device} {
+          font-size: 15px;
+        }
+        @media #{$xs-device} {
+          font-size: 14px;
+        }
+        i {
+          color: $theme-color;
+          margin-right: 25px;
+          position: relative;
+          top: 1px;
+          @media #{$xs-device} {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

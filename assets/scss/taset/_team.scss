@@ -1,0 +1,163 @@
+/*
+-----------------------------------------------------------------------
+    Team CSS
+-----------------------------------------------------------------------
+*/
+.team-area {
+  &.team-default-area {
+  	padding: 137px 0 140px;
+  	@media #{$lg-device} {
+  		padding: 97px 0 100px;
+  	}
+  	@media #{$sm-device} {
+  		padding: 77px 0 80px;
+  	}
+  	.section-title {
+  		margin-bottom: 79px;
+  		@media #{$lg-device} {
+  			margin-bottom: 59px;
+  		}
+  		@media #{$sm-device} {
+  			margin-bottom: 49px;
+  		}
+  	}
+  }
+  &.team-style1-area {
+  	padding: 137px 0;
+  	@media #{$lg-device} {
+  		padding: 97px 0;
+  	}
+  	@media #{$sm-device} {
+  		padding: 77px 0;
+  	}
+  }
+}
+
+.team-member {
+	background-color: $white-f5;
+	border-radius: 2px;
+	margin-right: 39px;
+	padding: 0 0 40px;
+	@media #{$lg-device} {
+		padding: 0 0 30px;
+	}
+	@media #{$md-device} {
+		margin-right: 17px;
+		padding-bottom: 15px;
+	}
+	@media #{$xs-device} {
+		margin-right: 18px;
+	}
+	.thumb {
+		margin-bottom: 30px;
+		padding: 35px 35px 0;
+		text-align: center;
+		@media #{$lg-device} {
+			margin-bottom: 25px;
+			padding: 25px 25px 0;
+		}
+		@media #{$md-device} {
+			margin-bottom: 15px;
+			padding: 15px 15px 0;
+		}
+		img {
+			border-radius: 2px;
+			width: 100%;
+		}
+	}
+	.content {
+		background-color: $theme-color2;
+		border-radius: 2px;
+    left: 35px;
+    overflow: hidden;
+		position: relative;
+		width: calc(100% + 3px);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+		@include transition(all .3s ease-in-out);
+		@media #{$lg-device} {
+			left: 25px;
+		}
+		@media #{$md-device} {
+			left: 15px;
+		}
+		&:before {
+			background-color: $white;
+			border-radius: 2px;
+			content: "";
+			height: 100%;
+			position: absolute;
+			right: 4px;
+			top: 0;
+			width: 100%;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+			-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+			@include transition(all .3s ease-in-out);
+		}
+		&:after {
+			background-color: $theme-color2;
+			border-radius: 2px;
+			content: "";
+			height: 100%;
+			position: absolute;
+			right: 8px;
+			top: 0;
+			width: 100%;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+			-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 84% 100%, 0% 100%);
+			@include transition(all .3s ease-in-out);
+		}
+		.member-info {
+			padding: 17px 23px 11px;
+			position: relative;
+			z-index: 3;
+			@include transition(all .3s ease-in-out);
+			@media #{$lg-device} {
+				padding: 17px 15px 11px;
+			}
+			@media #{$md-device} {
+				padding: 15px 12px 9px;
+			}
+			.name {
+				color: $white;
+				font-size: 23px;
+				margin-bottom: 7px;
+				@media #{$lg-device} {
+					font-size: 18px;
+				}
+				@media #{$md-device} {
+					font-size: 15px;
+					margin-bottom: 5px;
+				}
+			}
+			.designation {
+				color: $theme-color;
+				font-weight: 400;
+				font-size: 15px;
+				@include transition(all .3s ease-in-out);
+				@media #{$lg-device} {
+					font-size: 13px;
+				}
+				@media #{$md-device} {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	&:hover {
+		.content {
+			background-color: $theme-color;
+			&:before {
+				background-color: $white;
+			}
+			&:after {
+				background-color: $theme-color;
+			}
+		}
+		.member-info {
+			.designation {
+				color: $white;
+			}
+		}
+	}
+}

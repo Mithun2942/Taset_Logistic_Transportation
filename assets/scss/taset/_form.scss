@@ -1,0 +1,212 @@
+/*
+-----------------------------------------------------------------------
+	Form CSS
+-----------------------------------------------------------------------
+*/
+
+
+// Comment Form Style
+.comment-form-wrap {
+  .section-title {
+    .title {
+      color: #131b13;
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 45px;
+      margin-top: 73px;
+      @media #{$xs-device} {
+        font-size: 24px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+.form-group {
+  margin-bottom: 18px;
+  .form-control {
+    background-color: $white-f5;
+    border-radius: 0;
+    border: 1px solid transparent;
+    box-shadow: none;
+    color: $black;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 14.5px 26px;
+    &:focus {
+      border-color: #ebebeb;
+      background-color: $white;
+    }
+    @include placeholder {
+      color: #656565;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+  textarea {
+    &.form-control {
+      min-height: 285px;
+      @media #{$sm-device} {
+        min-height: 160px;
+      }
+    }
+  }
+  .btn-theme {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 1px;
+    margin-top: 21px;
+    padding: 20.5px 33.5px;
+    text-transform: capitalize;
+    @media #{$sm-device} {
+      font-size: 15px;
+      padding: 17px 23px;
+    }
+    i {
+      font-size: 19px;
+      margin-right: 11px;
+      @media #{$sm-device} {
+        font-size: 15px;
+        margin-left: 4px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// Tracking Style
+.tracking-form-wrap {
+  margin-top: -140px;
+  position: relative;
+  z-index: 1;
+  @media #{$sm-device} {
+    margin-top: 0;
+    padding-top: 80px;
+  }
+  @media #{$xs-device} {
+    padding-top: 70px;
+  }
+  .tracking-searchbox {
+    align-items: center;
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 47.5px 2.5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding-right: 13px;
+    width: 100%;
+    @include transition(all .4s ease-out);
+    @media #{$lg-device} {
+      width: auto;
+    }
+    @media #{$sm-device} {
+      background-color: rgba($white, .93);
+      bottom: 30px;
+      display: block;
+      left: 30px;
+      padding-right: 0;
+      right: 30px;
+    }
+    .form-control {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      color: #656565;
+      font-size: 15px;
+      font-weight: 400;
+      padding: 11px 15px 11px 30px;
+      @media #{$md-device} {
+        font-size: 14px;
+      }
+      @media #{$sm-device} {
+        background: transparent;
+        font-size: 15px;
+        height: 70px;
+        padding: 11px 15px;
+      }
+      option {
+        font-size: 15px;
+        font-weight: 400;
+        @media #{$md-device} {
+          font-size: 14px;
+        }
+      }
+      &.select-dropdown {
+        appearance: none;
+        border-right: 1px solid #ebecf0;
+        cursor: pointer;
+        height: 85px;
+        position: relative;
+        @media #{$md-device} {
+          height: 70px;
+        }            
+        @media #{$sm-device} {
+          background-color: transparent;
+          border-bottom: 1px solid #ebecf0;
+          border-right: none;
+        }
+      }
+    }
+    .track-dropdown {
+      min-width: 321px;
+      position: relative;
+      @media #{$lg-device} {
+        min-width: 29%;
+      }
+      @media #{$md-device} {
+        min-width: 28%;
+      }
+      @media #{$sm-device} {
+        width: 100%;
+      }
+      &.style-two {
+        min-width: 366px;
+        @media #{$lg-device} {
+          min-width: 29%;
+        }
+        @media #{$md-device} {
+          min-width: 28%;
+        }
+      }
+      &:after {
+        content: "\eab2";
+        color: #656565;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        font-family: "IcoFont";
+        position: absolute;
+        right: 37px;
+        top: calc(50% - 8px);
+        pointer-events: none;
+        @media #{$sm-device} {
+          right: 19px;
+        }
+      }
+    }
+    .btn-theme {
+      font-size: 17px;
+      min-width: 190px;
+      max-height: 60px;
+      padding: 20.5px 42px;
+      text-align: left;
+      @media #{$md-device} {
+        font-size: 14px;
+        min-width: 138px;
+        padding: 17px 19px;
+      }
+      @media #{$sm-device} {
+        font-size: 15px;
+        height: 70px;
+        max-height: none;
+        padding: 17px 15px;
+        width: 100%;
+      }
+      .icon {
+        font-size: 20px;
+        right: 39px;
+        @media #{$md-device} {
+          right: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+/*
+-----------------------------------------------------------------------
+  Featured CSS
+-----------------------------------------------------------------------
+*/
+
+.featured-wrp {
+	border-radius: 2px;
+	margin-left: 48px;
+	background-color: $white-f5;
+	padding: 78px 30px 75px 41px;
+	@media #{$lg-device} {
+		margin-left: 30px;
+		padding: 40px 20px 45px;
+	}
+	@media #{$md-device} {
+		display: flex;
+		margin: 100px 0 0;
+		padding: 50px 15px 19px;
+	}
+	@media #{$sm-device} {
+		margin-top: 80px;
+		padding: 55px 12px 24px;
+	}
+	@media #{$xs-device} {
+		display: block;
+		padding: 65px 15px 64px;
+	}
+}
+.featured-item {
+	margin-bottom: 39px;
+	@media #{$lg-device} {
+		margin-bottom: 29px;
+	}
+	@media #{$md-device} {
+		margin: 0 12px 30px;
+	}
+	@media #{$sm-device} {
+		margin: 0 10px 30px;
+	}
+	@media #{$xs-device} {
+		margin: 0 0 30px;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.title {
+		font-size: 21px;
+		font-weight: 700;
+		margin-bottom: 13px;
+		@media #{$lg-device} {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		@media #{$md-device} {
+			font-size: 16px;
+			margin-bottom: 12px;
+		}
+		@media #{$sm-device} {
+			font-size: 18px;
+		}
+		a {
+			color: $heading-color;
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+	p {
+		line-height: 1.5625;
+		margin-bottom: 0;
+		@media #{$md-device} {
+			font-size: 13px;
+		}
+	}
+}

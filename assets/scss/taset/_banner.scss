@@ -1,0 +1,284 @@
+/*
+-----------------------------------------------------------------------
+    Home Slider CSS
+-----------------------------------------------------------------------
+*/
+
+.home-slider-area {
+  &.slider-default {
+    position: relative;
+    .home-slider-content {
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            &-active {
+              .slider-content-area {
+                .content {
+                  .inner-content {
+                    .wrap {
+                      &-one,
+                      &-two,
+                      &-three {
+                        opacity: 1;
+                        @include translate(0px, 0px);
+                      }
+                    }
+                  }
+                }
+                .thumb {
+                  .bg-thumb {
+                    -webkit-animation-delay: .15s;
+                    animation-delay: .15s;
+                    -webkit-animation-name: fadeInRight;
+                    animation-name: fadeInRight;
+                  }
+                }
+                .bg-logo {
+                  -webkit-animation-delay: .7s;
+                  animation-delay: .7s;
+                  -webkit-animation-name: fadeIn;
+                  animation-name: fadeIn;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-slider-item {
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 100px;
+      z-index: 1;
+      @media #{$sm-device} {
+        padding-bottom: 0;
+      }
+      .bg-logo {
+        position: absolute;
+        pointer-events: none;
+        top: calc(50% + 29px);
+        left: calc(50% - 40px);
+        width: 396px;
+        height: 399px;
+        transform: translate(0, -50%);
+        z-index: 1;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeOut;
+        animation-name: fadeOut;
+        @media #{$xl-device} {
+          height: 300px;
+          left: calc(50% - 70px);
+          width: 300px;
+        }
+        @media #{$lg-device} {
+          height: 250px;
+          left: calc(50% - 100px);
+          width: 250px;
+        }
+        @media #{$md-device} {
+          height: 200px;
+          left: calc(50% - 30px);
+          width: 200px;
+        }
+        @media #{$sm-device} {
+          display: none;
+        }
+      }
+      .bg-overlay {
+        background-color: $theme-color2;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: .50;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+    .slider-content-area {
+      align-items: center;
+      display: flex;
+      position: relative;
+      height: 840px;
+      z-index: 1;
+      @media #{$lg-device} {
+        height: 720px;
+      }
+      @media #{$md-device} {
+        height: 680px;
+      }
+      @media #{$sm-device} {
+        height: auto;
+        padding-bottom: 15px;
+      }
+      .content {
+        margin-top: 53px;
+        .inner-content {
+          margin-left: -1px;
+          position: relative;
+          @media #{$sm-device} {
+            margin: 0 auto;
+            max-width: 540px;
+            padding: 120px 0 100px;
+            text-align: center;
+          }
+          h2 {
+            color: $white;
+            font-size: 70px;
+            font-weight: $font-weight-bold;
+            line-height: 75px;
+            margin-bottom: 19px;
+            @media #{$lg-device} {
+              font-size: 48px;
+              line-height: 1.2;
+            }
+            @media #{$sm-device} {
+              font-size: 36px;
+            }
+          }
+          p {
+            color: $white;
+            font-size: 20px;
+            line-height: 1.75;
+            margin-bottom: 32px;
+            @media #{$lg-device} {
+              font-size: 17px;
+            }
+            @media #{$sm-device} {
+              font-size: 15px;
+            }
+          }
+          .btn-theme {
+            @include transition(all .3s ease-out);
+            @media #{$lg-device} {
+              padding: 17px 23px;
+            }
+            &:hover {
+              background-color: $white;
+              border-color: $white;
+              color: $theme-color;
+            }
+          }
+          .wrap {
+            &-one,
+            &-two,
+            &-three {
+              opacity: 0;
+              @include transition(all .6s ease-out);
+            }
+
+            &-one {
+              @include translate(0px, 35px);
+              transition-delay: .5s;
+            }
+            &-two {
+              @include translate(0px, 30px);
+              transition-delay: 1s;
+            }
+            &-three {
+              @include translate(0px, 25px);
+              transition-delay: 1.5s;
+            }
+          }
+        }
+      }
+      .thumb {
+        .bg-thumb {
+          height: 100%;
+          position: absolute;
+          right: 0;
+          width: calc(50% - 102px);
+          top: 100px;
+          z-index: 1;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+          @media #{$lg-device} {
+            top: 85px;
+            width: calc(55% - 102px);
+          }
+          @media #{$sm-device} {
+            border-radius: 2px;
+            height: 600px;
+            position: relative;
+            top: auto;
+            width: 100%;
+          }
+          @media #{$xxs-device} {
+            height: 480px;
+          }
+        }
+      }
+    }    
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

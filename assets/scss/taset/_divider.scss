@@ -1,0 +1,232 @@
+/*
+-----------------------------------------------------------------------
+    Divider CSS
+-----------------------------------------------------------------------
+*/
+
+.divider-area {
+  &.divider-default-area {
+    background-color: $theme-color;
+    overflow: hidden;
+    position: relative;
+    padding: 64px 0 70px;
+    @media #{$md-device} {
+      padding: 54px 0 60px;
+    }
+    @media #{$sm-device} {
+      padding: 44px 0 50px;
+    }
+    @media #{$xs-device} {
+      text-align: center;
+    }
+    .content {
+      @media #{$xs-device} {
+        margin-bottom: 20px;
+      }
+      .title {
+        color: $white;
+        font-size: 45px;
+        line-height: 1.2889;
+        margin-bottom: 0;
+        @media #{$lg-device} {
+          font-size: 36px;
+        }
+        @media #{$md-device} {
+          font-size: 30px;
+        }
+        @media #{$sm-device} {
+          font-size: 24px;
+        }
+        br {
+          @media #{$lg-device} {
+            display: none;
+          }
+        }
+      }
+    }
+    .divider-btn {
+      text-align: end;
+      position: relative;
+      z-index: 1;
+      @media #{$xs-device} {
+        text-align: center;
+      }
+      .btn-theme {
+        color: $heading-color;
+        font-size: 18px;
+        padding: 25px 29.96px;
+        position: relative;
+        top: 3px;
+        @media #{$sm-device} {
+          font-size: 14px;
+          padding: 17px 15px;
+        }
+        &:hover {
+          background-color: $theme-color2;
+          color: $white;
+        }
+        i {
+          margin-left: 10px;
+        }
+      }
+    }
+    .shape-group {
+      .shape-style4 {
+        bottom: 0;
+        left: calc(50% - 60px);
+        position: absolute;
+        pointer-events: none;
+        @media #{$xs-device} {
+          left: -100px;
+        }
+        @media #{$xxs-device} {
+          left: -190px;
+        }
+        @media #{$xss-device} {
+          left: -300px;
+        }
+      }
+    }
+  }
+  &.divider-style1-area {
+    padding: 140px 0 0;
+    @media #{$lg-device} {
+      padding: 100px 0 0;
+    }
+    @media #{$sm-device} {
+      padding: 80px 0 0;
+    }
+  }
+  &.divider-style2-area {
+    padding: 0;
+  }
+}
+
+.divider-wrap {
+  align-items: center;
+  background-color: $theme-color;
+  display: flex;
+  overflow: hidden;
+  @media #{$xxs-device} {
+    display: block;
+  }
+  .column-left {
+    align-items: center;
+    display: flex;
+    min-height: 255px;
+    padding: 0 0 0 70px;
+    width: calc(50% - 35px);
+    @media #{$md-device} {
+      min-height: 205px;
+      padding: 0 0 0 30px;
+    }
+    @media #{$sm-device} {
+      min-height: 190px;
+      padding: 0 0 0 15px;
+    }
+    @media #{$xs-device} {
+      min-height: 170px;
+    }
+    @media #{$xxs-device} {
+      min-height: auto;
+      padding: 41px 15px 44px;
+      text-align: center;
+      width: 100%;
+    }
+    .content {
+      p {
+        color: $white;
+        font-weight: $font-weight-bold;
+        font-size: 35px;
+        line-height: 1.2;
+        @media #{$lg-device} {
+          font-size: 28px;
+        }
+        @media #{$md-device} {
+          font-size: 24px;
+        }
+        @media #{$sm-device} {
+          font-size: 22px;
+        }
+        @media #{$xs-device} {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .column-right {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 255px;
+    overflow: hidden;
+    padding-left: 85px;
+    padding-right: 84px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    width: calc(50% + 36px);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+    @media #{$md-device} {
+      justify-content: center;
+      min-height: 205px;
+      padding-right: 30px;
+    }
+    @media #{$sm-device} {
+      min-height: 190px;
+    }
+    @media #{$xs-device} {
+      min-height: 170px;
+      padding-left: 40px;
+      padding-right: 15px;
+    }
+    @media #{$xxs-device} {
+      background-image: url("../../assets/img/photos/bg1.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: -3px;
+      min-height: auto;
+      padding: 40px 15px;
+      width: calc(100% + 3px);
+      clip-path: none;
+      -webkit-clip-path: none;
+    }
+    &:before {
+      background-image: url("../../assets/img/photos/bg1.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      height: 100%;
+      left: 4px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;   
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+      -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+      @media #{$xxs-device} {
+        display: none;
+      }
+    }
+    .content {
+      .title {
+        color: $white;
+        font-weight: $font-weight-bold;
+        font-size: 62.81px;
+        line-height: 1;
+        margin-bottom: 0;
+        @media #{$lg-device} {
+          font-size: 48px;
+        }
+        @media #{$md-device} {
+          font-size: 44px;
+        }
+        @media #{$sm-device} {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+}

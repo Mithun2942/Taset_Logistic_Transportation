@@ -1,0 +1,233 @@
+/*
+-----------------------------------------------------------------------
+  Footer CSS
+-----------------------------------------------------------------------
+*/
+
+.footer-area {
+  &.default-style {
+    .footer-main {
+      background-color: $theme-color2;
+      padding: 139px 0 74px;
+      position: relative;
+      @media #{$lg-device} {
+        padding: 95px 0 33px;
+      }
+      @media #{$sm-device} {
+        padding: 80px 0 50px;
+      }
+      .footer-shape {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .widget-item {
+    @media #{$sm-device} {
+      margin-bottom: 30px;
+    }
+  }
+  .widget-title {
+    @media #{$sm-device} {
+      display: none;
+    }
+    &.widget-collapsed-title {
+      display: block;
+      position: relative;
+      background-color: #424242;
+      padding: 20px 15px;
+      border-radius: 10px 10px 0 0;
+      cursor: pointer;
+      font-size: 17px;
+      margin-bottom: 0;
+      @include transition(all .1s ease-in-out);
+      @media #{$md-up-device} {
+        display: none;
+      }
+      @media #{$sm-device} {
+        padding: 18px 20px;
+      }
+      &:before {
+        font-family: "IcoFont";
+        font-size: 14px;
+        content: "\efc2";
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 60px;
+        text-align: center;
+        top: calc(50% - 8px);
+      }
+      &.collapsed {
+        border-radius: 10px;
+      }
+      &:not(.collapsed) {
+        &:before {
+          content: "\ef9a";
+          font-family: "IcoFont";
+        }
+      }
+    }
+  }
+
+  .widget-collapse-body {
+    @include transition(all .3s ease-out);
+    @media #{$md-up-device} {
+      display: block;
+    }
+    @media #{$sm-device} {
+      background-color: #535353;
+      padding: 0 22px 20px;
+    }
+    .widget-blog-wrap, .widget-menu-wrap {
+      @media #{$sm-device} {
+        padding-top: 35px;
+      }
+    }
+  }
+}
+
+.reveal-footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  @media #{$md-device} {
+    position: relative;
+  }
+}
+
+.site-wrapper-reveal {
+  position: relative;
+  @media #{$md-device} {
+    margin-bottom: 0 !important;
+  }
+}
+
+.widget-title {
+  color: $white;
+  line-height: 1;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 44px;
+  @media #{$md-device} {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+}
+
+.widget-blog-wrap {
+  margin-top: -8px;
+}
+
+.blog-post-item {
+  margin-bottom: 18px;
+  .content {
+    .title {
+      color: #d8dadf;
+      display: flex;
+      font-size: 19px;
+      line-height: 31px;
+      margin-bottom: 9px;
+      @media #{$sm-device} {
+        font-size: 16px;
+      }
+      .icon {
+        color: #d8dadf;
+        font-size: 17px;
+        margin-right: 16px;
+        margin-top: 8px;
+        @include transition(all .3s ease-in-out);
+      }
+      a {
+        color: #d8dadf;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+      &:hover {
+        .icon {
+          color: $theme-color;
+        }
+      }
+    }
+    .meta-date {
+      display: block;
+      font-size: 14px;
+      margin-left: 33px;
+      @media #{$sm-device} {
+        font-size: 13px;
+      }
+      i {
+        margin-right: 2px;
+      }
+      a {        
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.widget-menu-wrap {
+  .nav-menu {
+    display: block;
+    margin-bottom: 0;
+    margin-left: -1px;
+    li {
+      a {
+        color: #d8dadf;
+        font-size: 17px;
+        line-height: 1;
+        margin-bottom: 28px;
+        display: block;
+        @media #{$sm-device} {
+          font-size: 15px;
+          margin-bottom: 25px;
+        }
+        i {
+          color: #d8dadf;
+          margin-right: 16px;
+          @include transition(all .3s ease-in-out);
+        }
+        &:hover {
+          color: $theme-color;
+          i {
+            color: $theme-color;
+            margin-right: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: #091649;
+  padding: 21px 0;
+}
+
+.widget-copyright {
+  p {
+    color: $white;
+    font-size: 16px;
+    text-align: center;
+    span {
+      color: $theme-color;
+    }
+    i {
+      color: $theme-color;
+      font-size: 15px;
+      margin: 0 2px 0 1px;
+    }
+    a {
+      color: $theme-color;
+    }
+  }
+}
